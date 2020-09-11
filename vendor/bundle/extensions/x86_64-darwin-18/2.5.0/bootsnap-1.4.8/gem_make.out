@@ -1,0 +1,15 @@
+current directory: /Users/fujiidaisuke/project_individual/rails_trial/dora-goroku/vendor/bundle/gems/bootsnap-1.4.8/ext/bootsnap
+/Users/fujiidaisuke/.rbenv/versions/2.5.7/bin/ruby -r ./siteconf20200911-54563-xf8opv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/fujiidaisuke/project_individual/rails_trial/dora-goroku/vendor/bundle/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/fujiidaisuke/project_individual/rails_trial/dora-goroku/vendor/bundle/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/fujiidaisuke/project_individual/rails_trial/dora-goroku/vendor/bundle/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20200911-54563-wu3xp8/bootsnap
