@@ -3,12 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 $main_color: #ddd;
-
-.body {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
+$doc_primary: #49cc90;
+$doc_secondary: #EAFAF1;
 
 h1 {
   line-height: 32px;
@@ -35,4 +31,42 @@ header {
   flex-flow: column;
   align-items: center;
   padding: 32px 16px;
+}
+
+.docs {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 800px;
+  font-size: 18px;
+  padding: 32px 0;
+
+  h2 {
+    font-size: 32px;
+    background-color: $doc_primary;
+    color: #fff;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  table {
+    th {
+      font-size: 24px;
+      background-color: $doc_secondary;
+    }
+    td {
+      font-size: 18px;
+    }
+  }
+
+  pre {
+    width: 100%;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+  }
 }
