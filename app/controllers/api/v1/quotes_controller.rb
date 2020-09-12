@@ -2,13 +2,15 @@ module Api
   module V1
     class QuotesController < ApplicationController
       def index
-        quotes = Quote.order(created_at: :desc)
+        quotes = Quote.order(created_at: :desc).map do |quote|
+          quote.slice(:character, :quote)
+        end
         render json: quotes
       end
 
-      def show
-        quote = Quote.find(params[:id])
-        render json: quote
+      def random
+        quote = Quote.order(Arel.sql('RANDOM()')).first
+        render json: quote.slice(:character, :quote)
       end
     end
   end

@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # API
   namespace 'api' do
     namespace 'v1' do
-      resources :quotes, only: [:index, :show]
+      resources :quotes, only: [:index]
+      get 'quotes/random'
     end
   end
 end
