@@ -1,0 +1,38 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$main_color: #ddd;
+
+.body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+h1 {
+  line-height: 32px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 16px;
+  background-color: $main_color;
+  .github {
+    &:hover {
+      opacity: 0.5;
+      transition: opacity 0.3s ease-out;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 32px 16px;
+}
