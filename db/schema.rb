@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_11_004450) do
+ActiveRecord::Schema.define(version: 2020_09_16_005531) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_09_11_004450) do
     t.string "quote"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "public_uid"
+    t.index ["public_uid"], name: "index_quotes_on_public_uid", unique: true
   end
 
 end
