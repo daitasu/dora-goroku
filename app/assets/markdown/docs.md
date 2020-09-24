@@ -10,6 +10,8 @@
 }
 ```
 
+[Try it](/api/v1/quotes/random)
+
 ## GET /api/v1/quotes
 ### Parameters
 
@@ -40,3 +42,5 @@ https://hogehoge.com/api/v1/quotes?keyword=人生
   }
 ]
 ```
+
+[Try it](/api/v1/quotes)

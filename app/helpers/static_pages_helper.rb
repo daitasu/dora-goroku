@@ -14,7 +14,9 @@ module StaticPagesHelper
       lax_html_blocks: true,
       strikethrough: true
     }
-    renderer = Redcarpet::Render::HTML.new()
+    renderer = Redcarpet::Render::HTML.new(
+      link_attributes: { rel: 'nofollow', target: "_blank" }
+    )
     markdown = Redcarpet::Markdown.new(renderer, options)
 
     markdown.render(docs).html_safe
