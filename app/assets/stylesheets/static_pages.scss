@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+$tablet: 560px;
+
+@mixin media-up($breakpoint: $tablet) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 $main_color: #ddd;
 $doc_primary: #49cc90;
 $doc_secondary: #EAFAF1;
@@ -9,6 +17,10 @@ $doc_secondary: #EAFAF1;
 h1 {
   line-height: 32px;
   margin: 0;
+  font-size: 2.5em;
+  @include media-up {
+    font-size: 3em;
+  }
 }
 
 header {
@@ -30,24 +42,44 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 32px 16px;
+  padding: 24px 8px;
+
+  @include media-up {
+    padding: 32px 16px;
+  }
+}
+
+.site-logo {
+  max-width: 250px;
+  @include media-up {
+    max-width: unset;
+  }
 }
 
 .docs {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  width: 800px;
+  width: 96%;
   font-size: 18px;
   padding: 32px 0;
 
+  p {
+    margin: 0 0 8px;
+  }
+
   h2 {
-    font-size: 32px;
+    font-size: 24px;
     background-color: $doc_primary;
     color: #fff;
-    width: 100%;
-    padding: 16px;
+    width: 96%;
+    padding: 4px 8px;
     border-radius: 8px;
+    margin: 40px 0 16px;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 24px 0 8px;
   }
 
   table {
@@ -65,8 +97,24 @@ header {
     font-size: 14px;
     background-color: #000;
     color: #fff;
-    padding: 16px;
-    width: 100%;
+    padding: 8px;
+    width: 96%;
     border-radius: 8px;
+    margin: 8px 0 16px;
+    overflow-x: auto;
+  }
+
+  @include media-up {
+    width: 800px;
+    h2 {
+      font-size: 28px;
+      padding: 16px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    pre {
+      padding: 16px;
+    }
   }
 }
