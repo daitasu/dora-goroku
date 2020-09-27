@@ -1,24 +1,8 @@
-# README
+<img src="https://github.com/daitasu/dora-goroku/blob/master/app/assets/images/doragoro.png">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dora-Goroku is a public service api that serve about Doraemon quotes.
+---
 
-Things you may want to cover:
+The API details are as follows:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://dora-goroku.herokuapp.com/
